@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% load static %} {% block contenido %}
+
+        <section id="banner_sucu1">
+            <div class="contenedor_sucu1">
+                <h2>Sucursal</h2>
+                
+                <img src="{{sucursal.foto.url}}" alt="" width = "400px" >
+                
+            </div>
+        </section>
+
+        <div class="separador1-sucu">
+            <h2>Encuentra nuestra sucursal <br>
+                ubicada en: </h2>
+        </div>
+
+        <section id="info-sucu">
+            <div class="contenedor-info">
+                <iframe
+                
+                    src="{{sucursal.mapa}}"
+                    width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="direccion">
+                    <h2>Black Stones Barber</h2>
+                    <p>Dirección: {{sucursal.direccion}} </p>
+                    <p>Horario:  {{sucursal.horarios}} </p>
+                    <p>Telefono:  {{sucursal.telefono}} </p>
+                    <p>Correo:  {{sucursal.correo}} </p>
+                </div>
+            </div>
+
+            <div class="img-sucu-maipu"></div>
+
+            <section id="equipo">
+                <div class="titulo-equipo">
+                    <h2>Team Black Stones: </h2>
+                </div>
+                <div class="info-equipo">
+            {% for peluquero in peluqueros %}
+               
+                    <a href="{% url 'BARBEROS' peluquero.nombre %}">
+                        <img src="{{peluquero.foto.url}}" alt="">
+                    </a>
+                
+            {% endfor %}
+                </div>
+            </section>
+        </section>
+
+{% endblock contenido %}

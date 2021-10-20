@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block contenido %}
+
+
+            <section class="form-re" >
+                <article>
+                    <h4>Agenda tu hora</h4>
+                    <form action="" method="">
+
+                        <input class="controls" type="date" name="" id="" required="">
+                        <input class="controls" type="time" name="" id=""required="">
+                     
+                       <center>
+                        <select class="op" name="" id="">
+                            <option value="" disabled selected>Seleccione un Barbero</option>
+                            <optgroup label="Team Black Stone: Maipu">
+                                <option value="">Natu</option>
+                                <option value="">Fefa</option>
+                                <option value="">Aly Estrella</option>
+                                <option value="">Mily Rockabilly</option>
+                            </optgroup>
+
+                            <optgroup label="Team Black Stone: Ñuñoa">
+                            <option value="">Kothe</option>
+                            <option value="">Pandy</option>
+                            <option value="">Pachy</option>
+                            </optgroup>
+
+                            <optgroup label="Team Black Stone: Puente Alto">
+                                <option value="">Carla</option>
+                                <option value="">Max</option>
+                                <option value="">Edward</option>
+                            </optgroup>
+
+                            <optgroup label="Team Black Stone: Santiago">
+                                <option value="">Sova</option>
+                                <option value="">Sage</option>
+                                <option value="">Nami</option>
+                            </optgroup>
+                        </select>
+                        </center>
+
+                        <input class="botons" type="submit" value="Agendar">
+                        <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a> </p>
+                        <p> ¿Ya tienes cuenta? <a href="iniciosesion.html"> Inicia sesión </a></p>
+                    </form>
+                   
+                </article>
+                
+
+            </section>
+
+    {% endblock contenido %}
+
+
+</body>
+</html>

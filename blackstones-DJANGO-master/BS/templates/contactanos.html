@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+
+
+        <main>
+            </div>
+            <section class="form-re" >
+                <article>
+                    <h4>Formulario de contacto</h4>
+                    <form action="{% url 'CONTACTANOS' %}" method="post">
+                        {% csrf_token %}
+
+                        <input class="controls" type="text" name="textNombre" id="Nombre"placeholder="Nombre" required pattern="[a-z A-Z]+" >
+                        <input class="controls" type="text" name="textApellido" id="Nombre"placeholder="Apellido" required pattern="[a-z A-Z]+" >
+                        <input class="controls" type="email" name="txtEmail" id="Email" placeholder="Email" required="">
+                        <textarea class="text-area" name="comentario" id="comentario" cols="30" rows="10" placeholder="Escriba aquí su comentario..."></textarea>
+                        <input class="botons" type="submit" value="Enviar" 
+                        onclick="enviar()">
+                    </form>                  
+                </article>
+            </section>
+        </main>
+
+    <script src="js/main.js"></script>
+
+{% endblock contenido %}
